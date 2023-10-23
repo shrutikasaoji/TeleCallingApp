@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.isvisible{
+    visibility:hidden;
+}
+
+.lbldarkcyan{
+    background-color: darkcyan;
+    color:white;
+}

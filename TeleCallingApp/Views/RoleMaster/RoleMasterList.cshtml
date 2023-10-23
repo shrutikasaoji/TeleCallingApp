@@ -1,0 +1,73 @@
+﻿@model IEnumerable<TeleCallingApp.Models.RoleMaster>
+
+@{
+    ViewBag.Title = "RoleMasterList";
+}
+
+<h2>RoleMasterList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateRole")
+</p>
+<table class="table">
+    <tr class="lbldarkcyan">
+        <th>
+            @Html.DisplayName("Actions")
+        </th>
+        <th class="">
+            @Html.DisplayName("Role Id")
+        </th>
+        <th>
+            @Html.DisplayName("Role Name")
+        </th>
+        <th>
+            @Html.DisplayName("Role Description")
+        </th>
+        <th>
+            @Html.DisplayName("Created On")
+        </th>
+        <th>
+            @Html.DisplayName("Created By")
+        </th>
+        <th>
+            @Html.DisplayName("Last Updated On")
+        </th>
+        <th>
+            @Html.DisplayName("Last Updated By")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RoleMasterId }) |
+                @Html.ActionLink("Details", "RoleDetail", new { id = item.RoleMasterId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RoleMasterId })
+            </td>
+            <td class="">
+                @Html.DisplayFor(modelItem => item.RoleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOnUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdateOnUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdateBy)
+            </td>
+        </tr>
+    }
+
+</table>

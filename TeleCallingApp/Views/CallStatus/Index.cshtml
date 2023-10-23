@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TeleCallingApp.Models.CallStatus>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CallStatusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallStatusDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallStatusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallStatusDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOnUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateOnUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CallStatusId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CallStatusId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CallStatusId })
+        </td>
+    </tr>
+}
+
+</table>

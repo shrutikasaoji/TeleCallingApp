@@ -1,0 +1,133 @@
+﻿@model IEnumerable<TeleCallingApp.Models.LeadDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Add New Lead", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            "Actions"
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeadId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustPincode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.CustCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedToUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assignment_Remarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateBy)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.LeadDetailId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.LeadDetailId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.LeadDetailId })
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LeadId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SerialNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustomerName)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustMobile)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustPincode)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.customer.CustCity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProviderName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AssignedToUser)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AssignedTo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AssignedDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Assignment_Remarks)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedOnUTC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedBy)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastUpdateOnUTC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastUpdateBy)
+    </td>
+
+</tr>
+}
+
+</table>

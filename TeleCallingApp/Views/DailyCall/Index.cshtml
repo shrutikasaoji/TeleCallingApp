@@ -1,0 +1,123 @@
+﻿@model IEnumerable<TeleCallingApp.Models.DailyCallDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddCallDetail")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CallDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerDetailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhatsAppRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SMSRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallingStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallStatusID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateOnUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerDetailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhatsAppRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SMSRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallingStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallStatusID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOnUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateOnUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DailyCallDetailId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DailyCallDetailId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DailyCallDetailId })
+        </td>
+    </tr>
+}
+
+</table>

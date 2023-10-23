@@ -1,0 +1,74 @@
+﻿@model TeleCallingApp.Models.RoleMaster
+
+@{
+    ViewBag.Title = "RoleDetail";
+}
+
+<h2>RoleDetail</h2>
+
+<div>
+    <h4>RoleMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOnUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOnUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdateOnUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdateOnUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdateBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RoleMasterId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
